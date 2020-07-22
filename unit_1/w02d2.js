@@ -128,3 +128,19 @@
 // //  9. log fast and furious...movie name appears outside of brackets
 
 // console.log('Fast and Furious')
+
+/////////////////////////////////
+////// Where is Waldo
+/////////////////////////////////
+
+// With the following multi-dimensional array
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+// Remove Eggbert (hint look at the slice/splice method(s))
+
+whereIsWaldo.splice(0,1)
+console.log(whereIsWaldo);
+
+// Change "Neff" to "No One"
+// Access and console.log "Waldo"
