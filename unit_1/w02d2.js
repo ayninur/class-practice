@@ -135,20 +135,35 @@
 
 // With the following multi-dimensional array
 
-const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
-                    ["Lucinda", "Jacc", "Neff", "Snoop"],
-                    ["Petunia", ["Baked Goods", "Waldo"]]];
+// const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+//                     ["Lucinda", "Jacc", "Neff", "Snoop"],
+//                     ["Petunia", ["Baked Goods", "Waldo"]]];
 
-// Remove Eggbert (hint look at the slice/splice method(s))
+// // Remove Eggbert (hint look at the slice/splice method(s))
 
-whereIsWaldo.splice(1,1)
-console.log(whereIsWaldo);
+// whereIsWaldo.splice(1,1)
+// console.log(whereIsWaldo);
 
-// Change "Neff" to "No One"
+// // Change "Neff" to "No One"
 
-whereIsWaldo[1][2] = "No One";
-console.log(whereIsWaldo[1][2]);
+// whereIsWaldo[1][2] = "No One";
+// console.log(whereIsWaldo[1][2]);
 
-// Access and console.log "Waldo"
+// // Access and console.log "Waldo"
 
-console.log(whereIsWaldo[2][1][1]);
+// console.log(whereIsWaldo[2][1][1]);
+
+/////////////////////////////////
+////// Excited Kitchen
+/////////////////////////////////
+
+kittyTalk = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."];
+catSays = "Love me, pet me! HSSSSSSS!"
+
+for (let i = 0; i <= 20; i++){
+    console.log(i + catSays)
+
+if (i % 2 === 0) {
+    console.log(kittyTalk)
+}
+}
