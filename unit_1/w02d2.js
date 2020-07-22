@@ -82,47 +82,49 @@
 ////// Methods, Revisted
 /////////////////////////////////
 
-const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
-// console.log(favMovies[8])
+// const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+// // console.log(favMovies[8])
 
-// 1. use the .sort method Thought question: what did this do to the array? Did it permanently alter it?
-// 
-favMovies.sort()
-console.log(favMovies)
-// 
-// 2. pop method
+// // 1. use the .sort method Thought question: what did this do to the array? Did it permanently alter it?
+// // 
+// favMovies.sort()
+// console.log(favMovies)
+// // 
+// // 2. pop method
 
-favMovies.pop()
-console.log(favMovies)
-// 
-// 3. push "Guardians of the Galaxy"
-// 
-favMovies.push("Guardians of the Galaxy")
-console.log(favMovies)
-// 
-// 4. Reverse the array
+// favMovies.pop()
+// console.log(favMovies)
+// // 
+// // 3. push "Guardians of the Galaxy"
+// // 
+// favMovies.push("Guardians of the Galaxy")
+// console.log(favMovies)
+// // 
+// // 4. Reverse the array
 
-favMovies.reverse()
-console.log(favMovies)
+// favMovies.reverse()
+// console.log(favMovies)
 
-// 5. Use the shift method
+// // 5. Use the shift method
 
-favMovies.shift()
-console.log(favMovies)
+// favMovies.shift()
+// console.log(favMovies)
 
-// 6. unshift- what does it return?--the same as what was there before
+// // 6. unshift- what does it return?--the same as what was there before
 
-favMovies.unshift()
-console.log(favMovies)
+// favMovies.unshift()
+// console.log(favMovies)
 
-// 7. splice
+// // 7. splice
 
-favMovies.splice(favMovies.indexOf("Django Unchained"), "Avatar");
-console.log(favMovies)
+// favMovies.splice(favMovies.indexOf("Django Unchained"), "Avatar");
+// console.log(favMovies)
 
-// 8. slice
+// // 8. slice
 
-const sliceHalfMovies = favMovies.slice(Math.floor(favMovies.length/2), favMovies.length);
-console.log(sliceHalfMovies);
+// const sliceHalfMovies = favMovies.slice(Math.floor(favMovies.length/2), favMovies.length);
+// console.log(sliceHalfMovies);
 
-console.log('Fast and Furious')
+// //  9. log fast and furious...movie name appears outside of brackets
+
+// console.log('Fast and Furious')
