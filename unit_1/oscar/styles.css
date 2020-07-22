@@ -1,0 +1,43 @@
+.sectionOne {
+    color: blue;
+}
+.sectionOne img {
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin-right: -9em;
+    padding: 8px;
+}
+.number {
+    float: right;
+    margin-right: 8em;
+    color: lightgray;
+    font-weight: 200;
+    font-size: 20px;
+    padding: 10px;
+}
+.logIn {
+    float: right;
+    margin-right: -12em;
+    font-size: 18px;
+    color: rgba(31, 29, 29, 0.692);
+    padding: 10px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.sectionTwo {
+    background-color: blue;
+    color: white;
+}
+.boxOne {
+    background-image: center;
+
+}
+.boxTwo {
+    background-image: center;
+
+}
+.boxThree {
+    background-image: center;
+
+}
