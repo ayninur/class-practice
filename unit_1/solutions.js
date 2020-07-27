@@ -19,17 +19,36 @@
 // Write a function checkPalindrome that accepts a single argument, a string. The function should return true (Boolean) if the string 
 // is a palindrome, false if it is not. Make sure your function will give the correct answer for words with capital letters.
 
-const checkPalindrome = (string) => {           //Write a function checkPalindrome that accepts a single argument a string.
-    // The function should return true if the string is palindrome a plaindrome = the word backwards
-    sting = string.toUpperCase()
-    let stringReversed = string.split("").reverse().join("");//describing what palindrome is
-    if (string === stringReversed) {
-        return true
-    }
-    return false;
-}
-console.log(checkPalindrome("badab"));
-console.log(checkPalindrome("Ayni"))
+// const checkPalindrome = (string) => {           //Write a function checkPalindrome that accepts a single argument a string.
+//     // The function should return true if the string is palindrome a plaindrome = the word backwards
+//     sting = string.toUpperCase()
+//     let stringReversed = string.split("").reverse().join("");//describing what palindrome is and why the string has to be the same as its reverse
+//     if (string === stringReversed) {
+//         return true
+//     }
+//     return false;
+// }
+// console.log(checkPalindrome("badab"));//hey console try thia
+// console.log(checkPalindrome("Ayni"))
 
+
+
+/////////////////////////////////////////////////////
+/////// Sum Array
+/////////////////////////////////////////////////////
+
+sumArray = (array) => {
+
+    let sum = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+
+    }
+    return sum;
+
+}
+
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 
