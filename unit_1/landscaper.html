@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landscaper</title>
+  </head>
+  <body>
+    <script>
+      //Player Stats
+      const playerStats = {
+        money: 0,
+        tool: 0,
+        quit: false,
+      };
+      //Tools
+      const tools = [
+        { name: "teeth", cost: 0, reward: 20 },
+        { name: "scissors", cost: 100, reward: 50 },
+      ];
+      //functions
+      const win = () => {
+        return playerStats.money >= 200 && playerStats.tool === 1;
+      };
+      const mow = () => {
+        alert(
+          `You mow lawn with ${tools[playerStats.tool].name} and are rewarded ${
+            tools[playerStats.tool].reward
+          }`
+        );
+        playerStats.money += tools[playerStats.tool].reward;
+      };
+      const buy = () => {
+        const nextTool = tools[playerStats.tool + 1];
+        if (nextTool.cost > playerStats.money) {
+          alert("do not have enough money");
+        } else {
+          alert("you have upgraded");
+          playerStats.money -= nextTool.cost;
+          playerStats.tool++;
+        }
+      };
+      const stats = () => {
+        alert(`
+            money: ${playerStats.money}
+            tool: ${tools[playerStats.tool].name}
+            `);
+      };
+      const quit = () => {
+        playerStats.quit = true;
+      };
+      //game logic
+      while (true) {
+        //Did you win?
+        if (win()) {
+          alert("you win!");
+          break;
+        } else {
+          if (playerStats.quit) {
+            alert("You Quit the game");
+            break;
+          } else {
+            const input = prompt(
+              "Do you want to mow lawn (m), buy tool (b), see stats (s), quit (q)"
+            );
+            switch (input.toLocaleLowerCase()) {
+              case "m":
+                mow();
+                break;
+              case "b":
+                buy();
+                break;
+              case "s":
+                stats();
+                break;
+              case "q":
+                quit();
+                break;
+              default:
+                alert("you did not select an option!");
+                break;
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
