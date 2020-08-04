@@ -205,11 +205,13 @@ console.log(bondTitles)
 const oddBonds = [];
 
 for (let years of bondFilms) {
-    if (years.year % 2 !== 0) {
+    if (years.year % 3 === 0) {
         oddBonds.push(years)
     }
 }
 console.log(oddBonds)
+
 // 3. Determine the total cumulative gross of the Bond franchise, and console.log the result. hint To make the grosses 
 // into usable numbers, look into the .replace Javascript method (there are many ways to do this, however). Look into 
 // parseInt also.
+
