@@ -208,10 +208,10 @@ numsDivided(6, 2)
 
 // What is meant by the error(s) this produces?
 
+// const foo = ()=>{
+//     console.log('hi');
+// }
+
+// foo();
 
 
-const foo = ()=>{
-    console.log('hi');
-}
-
-foo();
