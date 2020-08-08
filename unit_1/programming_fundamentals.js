@@ -92,21 +92,6 @@
 // Clearly the Semi colon is not necessary because the code ran the same.
 
 
-////////////////////////////////////////////////////////////////////
-/////// Section 2: Combining Data Types
-////////////////////////////////////////////////////////////////////
-
-
-// 1. Create an object, called crayonBox, that has a property that is an array. 
-// The array should have the names of some crayons. Log one of the elements of that array.
-
-crayonBox = {
-    ["midnight blue", "sunset orange", "field green"]
-}
-
-console.log(crayonBox[1])
-
-
 
 
 
