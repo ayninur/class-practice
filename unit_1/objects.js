@@ -77,5 +77,18 @@ class Person {
 
 }
 
+// Create a Story with your Person class
+
+// 1. Instantiate a new Person named Timmy
+
+const timmy = new Person ('Timmy');
+
+// 2. Age Timmy five years
+
+for (this.age = 0; this.age <= 5; this.age++) {
+    console.log(`Timmy is now ${this.age}`)
+}
+
+// 3. At this point Timmy's a little bummed. As a precocious child, he feels he's "seen it all" already. Have him eat five times.
 
 
