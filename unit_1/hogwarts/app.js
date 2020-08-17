@@ -42,14 +42,37 @@ $container.append($h3);
 // c. h4 element with your pet's name
         // this h4 element should have a class with a value of your pet type (owl, cat, toad, etc)
 
-let $h4 = $('<h4>').text('fluffy');
+let $h4 = $('<h4>').text('kitty');
 $container.append($h4);
 $h4.addClass('pet')
 
 // d. h4 element with your wand (You can make it whatever you want. Need help coming up with one? Here is one of many websites to help you find your wand playbuzz.com )
 
-let $h5 = $('<h4>').text('Harry Potter');
-$containder.append($h5);
+let $wand = $('<h5>').text('Harry Potter`s trademarked wand');
+$container.append($wand);
+
+/////////////////////
+// Year Three
+////////////////////
+
+// 1. Following what you did in previous years, add the following into an unordered list 
+// (with the attribute of storage and a value of trunk):
+
+let $trunk = $('<ul>Trunk</ul>').attr('storage', 'trunk');
+$container.append($trunk);
+
+// 2. list items of
+// butter beer
+// invisibility cloak (add a class of secret)
+// magic map (add a class of secret)
+// time turner (add a class of secret)
+// leash (for your pet, be sure to give this list element the same class as you gave your pet)
+// Bertie Bott's Every Flavor [Jelly] Beans.
+// append the unordered list to your container div
+
+let $items = $('<li>Butter Beer</li> <li class="secret"> Invisibility Cloak </li> <li class="secret">Time Turner</li> <li class="kitty">Leash</li> <li>Bertie Bott`s Every Flavor [Jelly] Beans</li>');
+$trunk.append($items);
+
 
 
 
