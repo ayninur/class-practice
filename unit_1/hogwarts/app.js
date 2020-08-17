@@ -73,6 +73,64 @@ $container.append($trunk);
 let $items = $('<li>Butter Beer</li> <li class="secret"> Invisibility Cloak </li> <li class="secret">Time Turner</li> <li class="kitty">Leash</li> <li>Bertie Bott`s Every Flavor [Jelly] Beans</li>');
 $trunk.append($items);
 
+/////////////////////
+// Year Four
+////////////////////
+
+// a. Right above your table add an h5 that says 'Spring 2017'
+
+let $h5 = $('<h5>Spring 2017</h5>')
+$container.append($h5);
+
+// b. Inside the table add a thead element
+
+let $table = $('<table>');
+$container.append($table);
+
+let $thread = $('<thread>');
+$table.append($thread);
+
+// Inside the thead element add two th elements
+    // in the first th add the text Day
+let $th1 = $('<th>').text('Day Class');
+$thread.append($th1);
+        // in the second th add the text Classes
+// let $th2 = $('<th>').text('Classes');
+// $thread.append($th2);
+
+// Create a tr element and add two td elements inside.
+// in the first td add the day Monday
+// in the second td add the classes you are taking 
+// (Herbology, Divination, History of Magic, Charms, 
+// Potions, Transfiguration, Defense Against the Dark Arts, 
+// Quidditch practice, etc.)
+
+let $tr = $('<tr>');
+$thread.append($tr);
+
+
+// Create more tr elements with tds inside so 
+// that you have Monday - Friday and classes each of those days
+
+let $tr1 = $('<tr>');
+$thread.append($tr1);
+
+let $td1 = $('<td> Monday Classes </td>');
+$tr1.append($td1);
+
+
+let $classes = $('<li>Herbology</li> <li>Divination</li> <li>History of Magic</li> <li>Charms</li> <li>Potions</li> <li>Transfiguration</li> <li>Defense Against the Dark Arts</li> <li>Quidditch Practice</li>')
+$tr1.append($classes);
+let $td2 = $('<td> Tuesday Classes </td>');
+$tr1.append($td2);
+let $td3 = $('<td> Wednesday Classes </td>');
+$tr1.append($td3);
+let $td4 = $('<td> Thursday Classes </td>');
+$tr1.append($td4);
+let $td5 = $('<td> Friday Classes </td>');
+$tr1.append($td5);
+
+
 
 
 
