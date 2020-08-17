@@ -23,8 +23,38 @@
     let $container = $('.container')
 
     $h1.text('Hogwarts')
-    $container.append('$h1')
+    $container.append($h1)
     
+/////////////////////
+// Year Two
+////////////////////
+
+// // a. h2 element with your name
+
+let $h2 = $('<h2>').text('Ayni');
+$container.append($h2);
+
+// b. h3 element with your house (Hufflepuff, Gryffindor, Ravenclaw or Slytherin)
+
+let $h3 = $('<h3>').text('Gryffindor');
+$container.append($h3);
+
+// c. h4 element with your pet's name
+        // this h4 element should have a class with a value of your pet type (owl, cat, toad, etc)
+
+let $h4 = $('<h4>').text('fluffy');
+$container.append($h4);
+$h4.addClass('pet')
+
+// d. h4 element with your wand (You can make it whatever you want. Need help coming up with one? Here is one of many websites to help you find your wand playbuzz.com )
+
+let $h5 = $('<h4>').text('Harry Potter');
+$containder.append($h5);
+
+
+
+
+
 
 
   });
