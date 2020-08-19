@@ -210,8 +210,8 @@ $theFellowship.append($h1);
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' text to 'Gandalf the White'
-
   // 2. add a class "the-white" to this element
+$('.buddies').eq(0).text('Gandalf the White').addClass('the-white')
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
@@ -226,11 +226,14 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-
+alert('The horn of gondor has been blown');
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+('buddies').eq(4).css('text-decoration', 'line-through')
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+  const deleted = baddies.splice(2, 1);
+  console.log($deleted)
+  console.log(baddies)
+  
 };
 
 // COMMIT YOUR WORK
@@ -242,9 +245,11 @@ const hornOfGondor = () => {
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+  $('.hobbit').eq(0).appendTo($('#Mordor'));
+  $('.hobbit').eq(1).appendTo($('#Mordor'));
 
-  // 2. add a div with an id of 'mount-doom' to Mordor
-
+// 2. add a div with an id of 'mount-doom' to Mordor
+const $mountDoom = $('div').attr('id', 'mount-doom').appendTo($mordor)
 };
 
 // COMMIT YOUR WORK
