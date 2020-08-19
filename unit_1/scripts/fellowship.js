@@ -261,10 +261,11 @@ const $mountDoom = $('div').attr('id', 'mount-doom').appendTo($mordor)
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
+const $gollum = $('<div>').attr('id', 'gollum').appendTo($mordor)
   // 2. Move the ring from Frodo and give it to Gollum
-
+$theRing.detach().appendTo($gollum);
   // 3. Move Gollum into Mount Doom
+$gollum.detach().appendTo($mountDoom);
 
 };
 
@@ -277,11 +278,12 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+$gollum.remove()
+$theRing.remove()
   // 2. remove all the baddies from the DOM
-
+$baddies.remove()
   // 3. Move all the hobbits back to the shire
-
+$theHobbits.appendTo(lands[0])
 };
 
 // COMMIT YOUR WORK
