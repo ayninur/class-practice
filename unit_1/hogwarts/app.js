@@ -130,11 +130,20 @@ $tr1.append($td4);
 let $td5 = $('<td> Friday Classes </td>');
 $tr1.append($td5);
 
+/////////////////////
+// Year Five
+////////////////////
+
+// Break your wand! (select the element that contains your wand and remove it)
+
+$wand.remove()
+
+// Class was hard! Drink all your butter beer! (remove just the butter beer from your list)
+
+$items[1].remove()
 
 
-
-
-
+$()
 
 
 

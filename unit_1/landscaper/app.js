@@ -293,32 +293,69 @@
 
 
 
-const tools = ["teeth", "scissors", "old lawnmower", "new lawnmower", "group of students"]
-let walletBalance = 0
+// const tools = ["teeth", "scissors", "old lawnmower", "new lawnmower", "group of students"]
+// let walletBalance = 0
 
-for (walletBalance = 0; walletBalance <= 1000; walletBalance++) {
-  alert("Welcome to the landcaper game let get to the bag")
-  break
+// for (walletBalance = 0; walletBalance <= 1000; walletBalance++) {
+//   alert("Welcome to the landcaper game let get to the bag")
+//   break
+// }
+// if (walletBalance < 5) {
+//   alert("Keep landscaping! You can do it!")
+//   walletBalance += 1
+// } else if (walletBalance > 5 && tools[1] === "scissors") {
+//   alert("Congrats!! You have enough to buy some scissors!")
+//     walletBalance += 5
+//   } else if (walletBalance > 25 && tools[2] === "old lawnmower") {
+//     alert("Congrats!! You have enough to buy an old lawnmower")
+//     walletBalance += 50
+//   } else if (walletBalance > 250 && tools[3] === "new lawnmower") {
+//     alert("Congrats you have enough to buy a new lawnmower")
+//     walletBalance += 100
+//   } else if (walletBalance > 500 && tools[4] === "group of students") {
+//     alert("Congrats you're almost there")
+//     walletBalance += 250
+//   } else if (walletBalance > 1000) {
+//     alert("You Winn!!!!!!")
+//   } else {
+//     alert("keep landscaping")
+//   }
+
+class USS {
+  constructor(hull, firepower, accuracy, damage)
+  this.hull = 20,
+  this.firepower = 5,
+  this.accuracy = .7,
+  this.damage = () {},
 }
-if (walletBalance < 5) {
-  alert("Keep landscaping! You can do it!")
-  walletBalance += 1
-} else if (walletBalance > 5 && tools[1] === "scissors") {
-  alert("Congrats!! You have enough to buy some scissors!")
-    walletBalance += 5
-  } else if (walletBalance > 25 && tools[2] === "old lawnmower") {
-    alert("Congrats!! You have enough to buy an old lawnmower")
-    walletBalance += 50
-  } else if (walletBalance > 250 && tools[3] === "new lawnmower") {
-    alert("Congrats you have enough to buy a new lawnmower")
-    walletBalance += 100
-  } else if (walletBalance > 500 && tools[4] === "group of students") {
-    alert("Congrats you're almost there")
-    walletBalance += 250
-  } else if (walletBalance > 1000) {
-    alert("You Winn!!!!!!")
-  } else {
-    alert("keep landscaping")
-  }
 
+
+
+  fight(enemy) {
+    if (Math.random() < this.accuracy) {
+      console.log(
+        `${this.name} has done ${this.firepower} damage to ${enemy.name}`
+      );
+      console.log((enemy.hull -= this.firepower));
+      if (enemy.hull <= 0) {
+        //   console.log(`${enemy.name} has already been destoryed`);
+        alienShips.shift();
+        console.log(alienShips);
+        console.log(enemy.hull);
+      }
+    } else {
+      console.log(`${this.name} missed`);
+    }
+  }
+  showStatus() {}
+}
+for (let i = 1; i <= 6; i++) {
+  aliens = new SpaceShip(`AlienShip ${i}`);
+  alienShips.push(aliens);
+}
+const hero = new SpaceShip("USS Enterprise", 20, 5, 0.7);
+console.log(alienShips[0]);
+console.log(alienShips[0]);
+console.log(alienShips[0].fight(hero));
+console.log(hero.fight(alienShips[0]));
  
