@@ -119,11 +119,13 @@ $('$theHobbits').eq([0]).append($theRing)
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-
+const $mordor = $('<ul>').addClass('mordor');
+for ( i = 0; i < baddies.length; i++) {
   // 2. give each of the baddies a class of "baddy"
-
+const $baddies = $('<li>').text(baddies[i]).addClass('baddy');
   // 3. remember to append the ul to Mordor
-
+  $mordor.append($baddies)
+}
 };
 
 // COMMIT YOUR WORK
