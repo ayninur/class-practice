@@ -1,3 +1,4 @@
+// create class hero
 class Hero {
     constructor(name, health) {
         this.name = name;
@@ -23,3 +24,23 @@ class Hero {
 }
 
 const dougie = new Hero("Dougie");
+
+//  create class Enemy
+
+class Enemy {
+    constructor(name, health) {
+        this.name = name,
+        this.health = health
+    }
+        this.weapons = {
+            pepperoniStars: 5,
+            cheeseGrease: 10
+        }
+        this.catchPhrases = [
+            `i'm youtube famous`,
+            `i'm more dangerous than an uncovered sewer`
+        ]
+        talkSmack() {
+            console.log(math.floor(math.random(this.catchPhrases.length)))
+        }
+}
