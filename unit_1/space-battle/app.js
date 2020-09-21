@@ -1,102 +1,46 @@
-//  tools
+// Start off by initializing your two components (alienship&USS)
+let alienShips = [];
+let USS;
 
-class Ships {
+// Let's create a class that describes all the spaceships for the entire game
+class SpaceShip {
     constructor(name, hull, firepower, accuracy) {
+        // by using the or/|| operator I am able to create one template spaceship for both USS and the alien ships. If the values are are passed in then it's the USS if the variable is not then it will become a random value
         this.name = name;
-        this.hull = hull;
-        this.firepower = firepower;
-        this.accuracy = accuracy;
+        // Math.floor(Math.random() (max - min + 1) + min)
+        this.hull = hull || Math.floor(Math.random() * 4) + 3;
+        this.firepower = firepower || Math.floor(Math.random() * 3) + 2;
+        this.accuracy = accuracy || Math.floor(Math.random() * 3) + 6/10;
     }
-}
-randomInterger = (min, max) => { 
-    min = Math.ceil(min)
-    max = Math.floor(max)
-    return Math.floor(Math.random() * (max - min + 1)) + min
-}
-
-// rounding the number I gave up and down also for defining random inergers
-
-const uss = new Ships("USS", 20, 5, .7)
-const alienShips = new Ships(
-    shipNames = ["ship 1", "ship 2", "ship 3", "ship 4", "ship 5", "ship 6"],
-    randomInterger(3, 6),
-    randomInterger(2, 4),
-    randomInterger(.6, .8),
-)
-
-console.log(uss)
-console.log(alienShips)
-
-
-
-// Functions
-//  attack, retreat, quit
-
-
-attack(enemy){
-    if (enemy.hull <= 0) {
-        alert(`This attack has been successful`)
-        alienShips.shift()
-        takenOut++
-    }
-    } 
-
-retreat() {
-    alert(`game es over`)
-    this.gameOver();
-}
-
-// global variables
-
-let alienShips = ['Ship 1', 'Ship 2', 'Ship 3', 'Ship 4', 'Ship 5', 'Ship 6'];
-
-let takenOut = 0;
-//////////////// start game
-
-startGame(){
-    let userInput = prompt(`Would you like to start a new game?`, '(Y)es or (N)o');
-    if (userInput === 'y' || userInput === 'Y') {
-        console.log(attack())
-    } else {
-        prompt(close());
+    fight(enemy) {
+        if(Math.random() < this.accuracy) {
+            alert(
+                `The ${this.name} has successfully hit and has done ${this.firepower} damage to ${enemy.name}`
+            );
+            enemy.hull -= this.firepower;
+            if (enemy.hull <= 0) {
+                alert(`${enemy.name} has been destroyed!`);
+                alienShips.shift();
+                if(alienShips.length === 0 || USS.hull <= 0) {
+                    gameOver();
+                } else{
+                    this.showStatus(enemy);
+                } else {
+                    alert(`${this.name} missed ${enemy.name}`);
+                }
+            }
+            showStatus(enemy) {
+                alert(`${enemy.name}'s hull is now at ${enemy.hull}`);
+            }
+        }
+        const generateShips = () => {
+            for (let i = 1; i <= 6; i++) {
+                let aliens = new SpaceShip('AlienShip ${i}');
+                alienShips.push(aliens);
+            }
+            USS = new SpaceShip("USS", 20, 5, 0.7);
+        }
     }
 }
 
-gameOver(){
-    uss.startGame();
-}
-
-///////////////////////////////////////////////////////////
-/////// Logic
-///////////////////////////////////////////////////////////
-
-while (true) {
-    if (win()) {
-        alert("you win!");
-        break;
-    } else {
-        if (isDamaged()) {
-            alert("YOU'VE BEEN HIT!, YOU'VE BEEN HIT!")
-            break
-        } else {
-        if (isDestroyed) {
-            alert("Dammmnnn bruh you been hit hit")
-        } else {
-            const input = prompt("Do you want to (a) attack, (r) retreat, or (c) continue playing");
-        switch (input.toLocaleLowerCase()) {
-            case "a":
-                attack();
-                break;
-            case "r":
-                retreat();
-                break;
-            case "c":
-                continuePlaying();
-                break;
-        }
-        }
-        }
-    } 
-}
-
-// this doesnt work but i trieddddddd
+// Now that we've introduced our ship lets start some action

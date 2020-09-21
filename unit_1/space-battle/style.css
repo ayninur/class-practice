@@ -1,0 +1,39 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"); 
+    text-align: center;  
+}
+h1 {
+    color: black;
+    font-family: 'Press Start 2P', avenir;
+}
+#container {
+    position: relative;
+    top: 100px;
+    background-color: rgba(66, 91, 105, .98);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 425px;
+    overflow: auto;
+    border: .5px solid lightblue;
+
+}
+.spaceship {
+    height: 150px;
+    weight: 150px;
+}
+.button {
+    background-color: black;
+   font-family: 'Press Start 2P', avenir; 
+   border-radius: 2px;
+   font-weight: 100;
+   border: .5px solid lightblue;
+   color: lightblue;
+   vertical-align: middle;
+   text-align: center;
+   cursor: pointer;
+   font-size: 10px;
+   margin: 0;
+   padding: 8px 15px 6px;
+}
