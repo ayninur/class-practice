@@ -1,0 +1,38 @@
+body {
+    background-image: url('http://www.preventionlane.org/wp-content/uploads/2015/02/blackboard.jpg');
+    background-size: cover;
+    font-size: 28px;
+    color: rgba(255,255,255,0.7);
+    font-family:  'Amatic SC',cursive, sans-serif;
+    min-height: 100vh;
+    text-align: center;
+}
+#gameboard {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;   
+}
+
+.square {
+    float: left;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    
+}
+
+.bottom {
+    border-bottom: 7px solid rgba(255,255,255,0.7);
+}
+
+.right {
+    border-right: 7px solid rgba(255,255,255,0.7);
+}
+
+.ex {
+    background-color: rgba(255,255,255,0.7);
+}
+
+.oh {
+    background-color: purple;
+}
