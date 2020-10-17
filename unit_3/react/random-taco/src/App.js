@@ -4,6 +4,7 @@ import './App.css';
 
 import Display from "./components/Display.js";
 // import Form from './components/Form.js'
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
 
@@ -23,9 +24,8 @@ function App() {
 
   return (
     <>
-      <h1>Random Taco</h1>
       <Display taco={random} />
-      {/* <Form search={getRandomTaco}/> */}
+      {/* <Form search={getRandomTaco} /> */}
     </>)
 
 
